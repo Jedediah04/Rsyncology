@@ -7,7 +7,7 @@ cd /tmp
 
 git clone https://github.com/jedediah04/rsyncology
 
-cd synchro-seedbox
+cd rsyncology
 
 chmod +x makeinstall.sh
 

@@ -6,7 +6,7 @@
 # Installation :
 # cd /tmp
 # git clone https://github.com/4r3/synchro-seedbox
-# cd synchro-seedbox
+# cd rsyncology
 # chmod +x makeinstall.sh
 #./makeinstall.sh
 #
@@ -67,7 +67,7 @@ echo -e "${CGREEN}Entrer l'adresse de votre NAS:$CEND"
 read NASADDR
 echo ""
 
-echo -e "${CGREEN}Entrer l'adresse de votre NAS:$CEND"
+echo -e "${CGREEN}Entrer le port SSH de votre NAS:$CEND"
 read NASPORT
 echo ""
 
@@ -96,7 +96,7 @@ sed -i "s/@user@/$USER/g;" /home/$USER/synchro/config/user.cfg
 sed -i 's#@folder@#'$FOLDER'#' /home/$USER/synchro/config/user.cfg
 sed -i "s/@nasuser@/$NASUSER/g;" /home/$USER/synchro/config/user.cfg
 sed -i "s/@nasaddr@/$NASADDR/g;" /home/$USER/synchro/config/user.cfg
-sed -i "s/@nasport@/$NASPORT/g;" /home/$USER/synchro/config/user.cfg
+sed -i "s/@nasport@/$NASPORT/g;" /home/$USER/synchro/synchro.sh
 sed -i 's#@nasfolder@#'$NASFOLDER'#' /home/$USER/synchro/config/user.cfg
 sed -i "s/@speed@/$SPEED/g;" /home/$USER/synchro/config/user.cfg
 
@@ -113,7 +113,7 @@ crontab mycron
 rm mycron
 
 #Suppression des fichiers d'installation
-rm -R /tmp/synchro-seedbox
+rm -R /tmp/rsyncology
 
 echo "${CBLUE}Merci, vous pouvez maintenant suivre la suite du tutoriel.$CEND"
 echo ""

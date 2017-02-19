@@ -115,5 +115,6 @@ rm mycron
 #Suppression des fichiers d'installation
 rm -R /tmp/rsyncology
 
-echo "${CBLUE}Merci, vous pouvez maintenant suivre la suite du tutoriel.$CEND"
+echo -e "${CBLUE}Merci, vous pouvez maintenant suivre la suite du tutoriel.$CEND"
+
 echo ""
